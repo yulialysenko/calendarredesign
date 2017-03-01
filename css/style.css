@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.total-container {
+    width: 100%;
+    height: 100%;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.month-slide {
+    display: flex;
+}
+
+.month {
+    margin: auto;
+    padding: .12em;
+    z-index: 1;
+    position: relative;
+    visibility: hidden;
+}
+
+.month .frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.month .circle {
+    height: 45vh;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: relative;
+}
+
+.month .circle p {
+    font-size: .25em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: lowercase;
+}
+
+.month .circle .bubble {
+    position: absolute;
+    border: 1px solid #333;
+    width: .2em;
+    height: .2em;
+    border-radius: 50%;
+    text-align: center;
+    visibility: hidden;
+}
+
+.month .circle .bubble p {
+    font-size: 0.1em !important;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.week-slide .week-days-desc {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh;
+    width: 50%;
+    right: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.week-slide .week-days-desc .day {
+    width: 100%;
+    height: 10vh;
+    border-radius: .1em;
+    border: 0.001em solid black;
+    position: relative;
+    padding-left: 0.09em;
+    visibility: hidden;
+}
+
+.week-slide .week-days-desc .day .date {
+    font-size: .1em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.week-slide .week-days-desc .day .text {
+    width: 83%;
+    height: .15em;
+    background-color: #fff;
+    position: absolute;
+    right: .01em;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: .03em .1em .1em .03em;
+    border: 0.001em solid black;
+    padding: 0.01em 0.06em;
+}
+
+.week-slide .week-days-desc .day .text h3 {
+    font-size: .06em;
+}
+
+.week-slide .week-days-desc .day .text p {
+    font-size: .03em;
+}
+
+.week {
+    margin: .1em;
+    padding: .12em;
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    visibility: hidden;
+}
+
+.week-slide .week .circle {
+    height: 35vh;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: relative;
+}
+
+.week-slide .week .circle p {
+    font-size: .25em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: lowercase;
+}
+
+.week-slide .week .frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.week-slide .week .circle .bubble {
+    position: absolute;
+    border: 1px solid #333;
+    width: .2em;
+    height: .2em;
+    border-radius: 50%;
+    text-align: center;
+    visibility: hidden;
+}
+
+.week-slide .week .circle .bubble p {
+    font-size: 0.1em !important;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.day-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.day-slide .wrap {
+    width: 80vw;
+    height: 90vh;
+    border-radius: .25em 0 0 0;
+    position: relative;
+    border: 1px solid black;
+    visibility: hidden;
+    
+}
+
+.day-slide .wrap .photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.day-slide .wrap .date {
+    font-size: 0.2em;
+    width: 22%;
+    position: absolute;
+    bottom: 32%;
+    text-align: center;
+}
+
+.day-slide .wrap .month-name {
+    font-size: 0.1em;
+    position: absolute;
+    bottom: 22%;
+    width: 22%;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+.day-slide .wrap .text {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 1px solid black;
+    width: 75%;
+    margin: 0.06em;
+    padding: 0.06em;
+    background-color: white;
+}
+
+.day-slide .wrap .text h3 {
+    font-size: 0.1em;
+    margin-bottom: 1em;
+    visibility: hidden;
+}
+
+.day-slide .wrap .text p {
+    margin-bottom: 1em;
+    font-size: 0.05em;
+    visibility: hidden;
+}
+
+.hidden {
+    display: none;
+}
